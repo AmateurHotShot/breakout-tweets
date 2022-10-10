@@ -31,6 +31,7 @@ def getUserTweets(username, limit = 100):
 	outlier_values = df.iloc[outlier_index]
 
 	Filter_df  = tweet_df.loc[outlier_values.index]
-	print(Filter_df.sort_values(by=["Likes"], ascending=False))
+	return Filter_df.sort_values(by=["Likes"], ascending=False)
 
-getUserTweets('brosephpoole', 1000)
+if __name__ == "__main__":
+	 getUserTweets('brosephpoole', 1000)
