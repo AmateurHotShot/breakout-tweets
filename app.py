@@ -1,12 +1,18 @@
 from crypt import methods
-from flask import Flask
+from flask import Flask, Response
+from flask_cors import CORS
 import main
+
 app = Flask(__name__)
+CORS(app, resources={r"*": {"origins": "*"}})
 
 @app.route('/', methods=['GET'])
 def hello_world():
-		return main.getUserTweets('arvidkahl', 100).to_html()
+	response = main.getUserTweets('arvidkahl', 200).to_json(orient='records')
+	return Response(response, mimetype='application/json')
 
 @app.route('/<username>', methods=['GET', 'POST'])
 def user(username = 'arvidkahl', limit = 100):
-		return main.getUserTweets(username, 100).to_html()
+	response = main.getUserTweets(username, limit).to_dict()
+	# response.headers.add("Access-Control-Allow-Origin", "*")
+	return response

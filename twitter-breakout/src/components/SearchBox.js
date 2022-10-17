@@ -12,8 +12,7 @@ function SearchBox() {
 					<form action="" className="flex group-hover:outline-4">
 						<input className="w-72 h-10 bg-white rounded-r-full text-gray-400 outline-none pl-1" onChange={e => setName(e.target.value)}></input>
 					</form>
-					Link
-					{/* <h1 className="bg-red-300 font-bold px-5 hover:cursor-pointer" onClick={e => console.log(Name)}>🔍</h1> */}
+					<h1 className="bg-red-300 font-bold px-5 hover:cursor-pointer" onClick={e => console.log(Name)}>🔍</h1>
 				</div>
 			</div>
 		);
