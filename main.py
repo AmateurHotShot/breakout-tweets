@@ -8,7 +8,7 @@ import numpy as np
 def getUserTweets(username, limit = 100):
 	tweets = []
 
-	for tweet in sntwitter.TwitterUserScraper(username).get_items():
+	for tweet in sntwitter.TwitterSearchScraper(f'from:{username} exclude:replies').get_items():
 			if len(tweets) == limit:
 				break
 			else:
@@ -30,9 +30,9 @@ def getUserTweets(username, limit = 100):
 
 	outlier_values = df.iloc[outlier_index]
 
-	Filter_df  = tweet_df.loc[outlier_values.index]
-	Filter_df.sort_values(by=["Likes"], ascending=False).to_json
-	return Filter_df
+	tweet_df['Outlier'] = np.where(tweet_df.index.isin(outlier_values.index), True, False)
+	tweet_df.sort_values(by=["Likes"], ascending=False).to_json
+	return tweet_df
 
 if __name__ == "__main__":
 	 print(getUserTweets('brosephpoole', 1000))

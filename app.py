@@ -13,6 +13,5 @@ def hello_world():
 
 @app.route('/<username>', methods=['GET', 'POST'])
 def user(username = 'arvidkahl', limit = 100):
-	response = main.getUserTweets(username, limit).to_dict()
-	# response.headers.add("Access-Control-Allow-Origin", "*")
-	return response
+	response = main.getUserTweets(username, limit).to_json(orient='records')
+	return Response(response, mimetype='application/json')
