@@ -4,7 +4,7 @@
 ## BACKEND
 - [] Set up KNN to work for accounts
 - [] Set Up Twitter API
-	- [] Only original tweets, not reply-tweets, re-tweets, or quote-tweets
+	- [x] Only original tweets, not reply-tweets, re-tweets, or quote-tweets
 
 
 ## FRONTEND
@@ -13,8 +13,9 @@
 	- [] Chart with data points, showing outliers
 		- [] Tooltip, shows tweet on hover
 	- [] List of tweets
-		- [] Sort by date or by likes
+		- [x] Sort by date or by likes
 		- [] Show tweet in original form
+
 
 
 Future Features:
@@ -23,3 +24,4 @@ Future Features:
 - Generate tweets based on this account's style
 - Allow people to plug in their own account and get suggestions
  + Implement using the "Engagement" number when used on a personal account
+- Show average tweeting frequency
