@@ -4,6 +4,9 @@ function ResultCard(props) {
 	const tweet = props.data;
 	tweet.date = new Date(tweet.Date).toLocaleDateString();
 
+	const like_format = Intl.NumberFormat('en', {notation: 'compact'})
+	tweet.better_like = like_format.format(tweet.Likes);
+
 	
 	return (
 		<div>
@@ -14,7 +17,7 @@ function ResultCard(props) {
 					<div className="flex flex-col text-sm justify-between border-l border-slate-300 pl-1">
 						<p className="p-1 text-sm text-slate-400 self-end">{tweet.date}</p>
 						<div className="flex flex-row items-end self-end ml-2 p-2 text-xs font-medium text-slate-600">
-							<p className="mr-1 text-sm">❤️</p><p className="text-sm">{tweet.Likes}</p>
+							<p className="mr-1 text-sm">❤️</p><p className="text-sm">{tweet.better_like}</p>
 						</div>
 					</div>
 			</a>

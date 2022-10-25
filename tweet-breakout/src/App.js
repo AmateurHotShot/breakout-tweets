@@ -10,6 +10,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<SearchPage />}/>
+          {/* <Route path="/:handle/:limit" element={<ResultsPage />}/> */}
           <Route path="/:handle" element={<ResultsPage />}/>
         </Routes>
       </div>

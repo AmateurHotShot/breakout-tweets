@@ -8,9 +8,10 @@
 
 
 ## FRONTEND
-- [] webpage to input the account
-- [] Webpage for dashboard
-	- [] Chart with data points, showing outliers
+- [] images for tweets
+- [x] webpage to input the account
+- [x] Webpage for dashboard
+	- [x] Chart with data points, showing outliers
 		- [] Tooltip, shows tweet on hover
 	- [] List of tweets
 		- [x] Sort by date or by likes

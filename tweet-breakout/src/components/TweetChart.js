@@ -50,6 +50,26 @@ function TweetChart(props) {
 								unit: 'day'
 						}
 				}
+		},
+		plugins: {
+			tooltip: {
+				callbacks: {
+					label: (context) => {
+						let label = "";
+            if (context.parsed.y) {
+              // label = data[context.dataIndex].Tweet; //This one works... kind of
+							// label = context.raw.type;
+            }
+            return label;
+					}	
+				}
+			},
+    	title: {
+				display: true,
+				text: "Test chart",
+				position: "top"
+    	}
+
 		}
 	}
 

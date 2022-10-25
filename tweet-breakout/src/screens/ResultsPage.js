@@ -6,8 +6,9 @@ import ResultCard from "../components/ResultCard";
 import TweetChart from "../components/TweetChart";
 
 function ResultsPage({props}) {
-	const params = useParams();
-	const handle = params.handle;
+	let {handle, limit} = useParams();
+	// let handle = params.handle;
+	// let limit = params.limit;
 
 	const [loading, setLoading] = useState(true);
   const [data, setData] = useState([])
@@ -19,7 +20,7 @@ function ResultsPage({props}) {
 		const fetchData = async () => {
 			setLoading(true);
 			try {
-				const {data: response} = await axios.get(`http://127.0.0.1:5000/${handle}`);
+				const {data: response} = await axios.get(`http://127.0.0.1:5000/${handle}/100`);
 				const filtered_data = response.filter(tweet => tweet.Outlier === true);
         setData(response);
 				setFiltered(filtered_data);
