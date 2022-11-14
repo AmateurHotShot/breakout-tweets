@@ -2,8 +2,8 @@
 
 # TODO
 ## BACKEND
-- [] Set up KNN to work for accounts
-- [] Set Up Twitter API
+- [x] Set up STDEV to work for accounts
+- [x] Set Up Twitter API
 	- [x] Only original tweets, not reply-tweets, re-tweets, or quote-tweets
 
 
@@ -13,7 +13,7 @@
 - [x] Webpage for dashboard
 	- [x] Chart with data points, showing outliers
 		- [] Tooltip, shows tweet on hover
-	- [] List of tweets
+	- [x] List of tweets
 		- [x] Sort by date or by likes
 		- [] Show tweet in original form
 
@@ -26,3 +26,6 @@ Future Features:
 - Allow people to plug in their own account and get suggestions
  + Implement using the "Engagement" number when used on a personal account
 - Show average tweeting frequency
+
+
+for 1000 tweets using old method: 22.36 seconds

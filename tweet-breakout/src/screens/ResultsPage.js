@@ -20,7 +20,8 @@ function ResultsPage({props}) {
 		const fetchData = async () => {
 			setLoading(true);
 			try {
-				const {data: response} = await axios.get(`http://127.0.0.1:5000/${handle}/100`);
+				const {data: response} = await axios.get(`http://127.0.0.1:5000/${handle}`, {headers: {'limit': limit}});
+				console.table(response)
 				const filtered_data = response.filter(tweet => tweet.Outlier === true);
         setData(response);
 				setFiltered(filtered_data);

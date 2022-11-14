@@ -1,9 +1,7 @@
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.neighbors import NearestNeighbors
 import numpy as np
-
+import time
 
 def getUserTweets(username, limit):
 	tweets = []
@@ -14,7 +12,6 @@ def getUserTweets(username, limit):
 			else:
 				tweets.append([tweet.date, tweet.id, tweet.content, tweet.url, tweet.likeCount])
 
-
 	tweet_df = pd.DataFrame(tweets, columns=['Date', 'Id', 'Tweet', 'Url', 'Likes'])
 	df = tweet_df[['Likes']]
 
@@ -23,8 +20,10 @@ def getUserTweets(username, limit):
 	IQR = Q3 - Q1
 
 	tweet_df['Outlier'] = np.where((tweet_df['Likes'] > (Q3 + 1.5 * IQR)), True, False)
-	tweet_df.sort_values(by=["Likes"], ascending=False).to_json
+	tweet_df.sort_values(by=["Likes"], ascending=False)
 	return tweet_df
 
 if __name__ == "__main__":
-	 print(getUserTweets('brosephpoole', 100))
+	start_time = time.time()
+	tweets = getUserTweets('levelsio', 1000)
+	print("--- %s seconds ---" % (time.time() - start_time))
