@@ -6,7 +6,7 @@ import ResultCard from "../components/ResultCard";
 import TweetChart from "../components/TweetChart";
 
 function ResultsPage({props}) {
-	let {handle, limit} = useParams();
+	const {handle, limit} = useParams();
 	// let handle = params.handle;
 	// let limit = params.limit;
 
