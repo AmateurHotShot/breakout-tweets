@@ -8,7 +8,7 @@
 			"type": "shell",
 			"command": "git add . && git commit -a --allow-empty-message -m '' && git push",
 			"presentation": {
-				"reveal": "silent",
+				"reveal": "never",
 				"clear": true,
 				"revealProblems": "onProblem",
 				"close": true,
