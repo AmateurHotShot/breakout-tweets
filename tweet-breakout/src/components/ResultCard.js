@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function ResultCard(props) {
 	const tweet = props.data;
 	tweet.date = new Date(tweet.Date).toLocaleDateString();
