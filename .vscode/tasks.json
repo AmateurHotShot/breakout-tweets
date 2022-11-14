@@ -7,6 +7,7 @@
 			"label": "Git Add Commit Push",
 			"type": "shell",
 			"command": "git add . && git commit -a --allow-empty-message -m '' && git push",
+			"isBackground": true
 		}
 	]
 }
