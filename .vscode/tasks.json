@@ -10,9 +10,8 @@
 			"presentation": {
 				"reveal": "never",
 				"clear": true,
-				// "revealProblems": "onProblem",
-				// "close": true,
-				// "focus": false
+				"revealProblems": "onProblem",
+				"focus": false
 			},
 			"isBackground": true,
 			"problemMatcher": []
