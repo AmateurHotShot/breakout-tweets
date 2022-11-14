@@ -13,6 +13,7 @@
 				"revealProblems": "onProblem",
 				"focus": false
 			},
+			"problemMatcher": []
 		}
 	]
 }
