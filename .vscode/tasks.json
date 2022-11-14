@@ -8,11 +8,10 @@
 			"type": "shell",
 			"command": "git add . && git commit -a --allow-empty-message -m '' && git push",
 			"presentation": {
-				// "reveal": "silent",
-				// "clear": true,
+				"reveal": "silent",
+				"clear": true,
 				// "revealProblems": "onProblem",
 				// "close": true
-				"showReuseMessage": false
 			},
 			"isBackground": true,
 			"problemMatcher": []
